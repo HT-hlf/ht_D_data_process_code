@@ -9,8 +9,8 @@ import os
 # img_path=r"G:\Internet_Dataset\recordData\RGBD_intelnet_b\rgb"
 # label_path=r"G:\Internet_Dataset\recordData\RGBD_intelnet_b\annotation"
 
-img_path=r"G:\roadway_collect_dataset\recordData_process_annotation_sum_negative_new\JPEGImages_val"
-label_path=r"G:\roadway_collect_dataset\recordData_process_annotation_sum_negative_new\Annotations_val"
+img_path=r"F:\doing\Motor_detection_dataset\third_dataset\labeled\zhuohang_311\images"
+label_path=r"F:\doing\Motor_detection_dataset\third_dataset\labeled\zhuohang_311\labels"
 
 img_list=os.listdir(img_path)
 label_list=os.listdir(label_path)

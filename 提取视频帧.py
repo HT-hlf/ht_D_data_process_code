@@ -2,14 +2,16 @@
 
 
 
-
+import os
 # 全局变量
-VIDEO_PATH = r'G:\doing\Motor_detection_dataset\second_dataset\receve\3431-3\3433.mp4' # 视频地址
-EXTRACT_FOLDER = r'G:\doing\Motor_detection_dataset\second_dataset\receve\3431-3\3433' # 存放帧图片的位置
-EXTRACT_FREQUENCY = 80 # 帧提取频率
+VIDEO_PATH = r'F:\doing\Motor_detection_dataset\third_dataset\receive\31131-3\31131.mp4' # 视频地址
+EXTRACT_FOLDER = r'F:\doing\Motor_detection_dataset\third_dataset\receive\31131-3\31131' # 存放帧图片的位
+EXTRACT_FREQUENCY = 65 # 帧提取频率
 
-
-
+def creat_dir(out_dir):
+    if not os.path.isdir(out_dir):
+        os.makedirs(out_dir)
+creat_dir(EXTRACT_FOLDER)
 def extract_frames(video_path, dst_folder, index):
     # 主操作
     import cv2
@@ -24,7 +26,7 @@ def extract_frames(video_path, dst_folder, index):
             break
         if count % EXTRACT_FREQUENCY == 0:
             # save_path = "{}/{:>03d}.jpg".format(dst_folder, index)
-            save_path = dst_folder+'/'+'3633_'+str(index)+'.jpg'
+            save_path = dst_folder+'/'+'third_31131_'+str(index)+'.jpg'
             cv2.imwrite(save_path, frame)
             index += 1
         count += 1
